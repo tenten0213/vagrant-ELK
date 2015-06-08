@@ -1,0 +1,8 @@
+---
+- hosts: all
+  roles:
+    - { role: geerlingguy.java }
+    - { role: geerlingguy.elasticsearch }
+    - { role: geerlingguy.logstash }
+    - { role: geerlingguy.nginx }
+    - { role: geerlingguy.kibana }
