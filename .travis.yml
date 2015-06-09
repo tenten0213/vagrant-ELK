@@ -22,9 +22,9 @@ install:
 
 script:
   # Check the role/playbook's syntax.
-  - "ansible-playbook -i tests/inventory tasks/main.yml --syntax-check"
+  - "ansible-playbook -i spec/localhost/inventory tasks/main.yml --syntax-check"
 
   # Run the role/playbook with ansible-playbook.
-  - "ansible-playbook -vvvv -i tests/inventory tasks/main.yml --connection=local --sudo"
+  - "ansible-playbook -vvvv -i spec/localhost/inventory tasks/main.yml --connection=local --sudo"
 
   - rake spec
